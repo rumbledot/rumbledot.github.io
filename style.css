@@ -22,7 +22,14 @@
 }
 
 #main_canvas {
-    
+    display: grid;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100% -30px;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(auto-fit, minmax(100, 1fr));
 }
 
 #start_bar {
@@ -101,6 +108,18 @@
 
 .start_menu_item>li {    
     margin: 5px 5px 5px 5px;
+    cursor: default;
+}
+
+.menu_line_break {
+    margin: 5px 5px 5px 5px;
+    height:5px;
+    width:90%;
+    background-color: black;
+}
+
+.menu_line_break:hover {
+    background-color: black !important;
 }
 
 .start_menu_item>li:hover {
