@@ -1,0 +1,109 @@
+#background_canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,173,712,1);
+    z-index: -1000;
+}
+
+#center_logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    overflow: hidden;
+    display: inline-block;
+    z-index: -950;
+}
+
+#main_canvas {
+    
+}
+
+#start_bar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background-color: #c0c5c9;
+    z-index: -950;
+}
+
+#start_button {
+    position: absolute;
+    left: 10px;
+    bottom: 2px;
+    width: 100px;
+    height: 25px;
+    background-color: #c0c5c9;
+    border-top: 2px solid #a3a3a3;
+    border-right: 2px solid #a3a3a3;
+    border-bottom: 2px solid #a0a3a5;
+    border-left: 2px solid #a0a3a5;
+    z-index: -900;
+}
+
+#start_button:hover {
+    background-color: #a3a3a3;
+}
+
+#start_menu {
+    display: none;
+    position: absolute;
+    width: 150px;
+    left: 5px;
+    bottom: 35px;
+    height: 200px;
+    background-color: #c0c5c9;
+    border: 2px solid #a3a3a3;
+    z-index: -980;
+}
+
+.start_menu_grow {
+    -webkit-animation-name: menu_growing;
+    -webkit-animation-duration: .2s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes menu_growing {
+    from {
+      -webkit-transform: translateY(150px);
+    }
+    to {
+      -webkit-transform: translateY(0px);
+    }
+}
+
+#start_menu_banner {
+    position:relative;
+    width: 10px;
+    height: 100%;
+    background-image: linear-gradient(#0601B2, #c0c5c9);
+}
+
+.start_menu_item {
+    position: absolute;
+    top: 0px;
+    left: 12px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 90%;
+}
+
+.start_menu_item>li {    
+    margin: 5px 5px 5px 5px;
+}
+
+.start_menu_item>li:hover {
+    background-color: #0601B2;
+    color: white;
+}
