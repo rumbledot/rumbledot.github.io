@@ -29,7 +29,8 @@ function Create_A_Window(x, y, title, w, h, unique) {
     a_window.style.height=h;
     a_window.style.top=x;
     a_window.style.left=y;
-    a_window.style.backgroundColor="#c0c5c9";
+    a_window.style.backgroundColor=COLOR_WINDOW_BG;
+    a_window.style.border="2px solid black"
     a_window.id=title;
     a_window.style.zIndex=0;
     windowIndex++;
@@ -39,8 +40,8 @@ function Create_A_Window(x, y, title, w, h, unique) {
     a_window_bar.style.position="relative";
     a_window_bar.style.width="90%";
     a_window_bar.style.height="25px";
-    a_window_bar.style.backgroundColor="#0601B2";
-    a_window_bar.style.color="white";
+    a_window_bar.style.backgroundColor=COLOR_WINDOW_BAR;
+    a_window_bar.style.color=COLOR_WINDOW_BAR_TEXT;
     a_window_bar.className="window_bar";
     a_window_bar.innerText=title;
 
@@ -74,10 +75,10 @@ function Pick_Window(clickedElement) {
     Reset_Window_Bar_Color();
     pickedElement = clickedElement;
     let window_bar = pickedElement.childNodes[0];
-    window_bar.style.backgroundColor="#0601B2";
-    window_bar.style.color="white";
+    window_bar.style.backgroundColor=COLOR_WINDOW_BAR;
+    window_bar.style.color=COLOR_WINDOW_BAR_TEXT;
     
-    pickedElement.addEventListener("mousedown", Mouse_Down, false);
+    window_bar.addEventListener("mousedown", Mouse_Down, false);
     window.addEventListener("mouseup", Mouse_Up, false);
 }
 
@@ -89,8 +90,8 @@ function Close_Window(clickedElement) {
 function Reset_Window_Bar_Color() {
     elements = document.getElementsByClassName("window_bar");
     for (var i = 0; i < elements.length; i++) {
-        elements[i].style.backgroundColor="#9ca3a8";
-        elements[i].style.color="black";
+        elements[i].style.backgroundColor=COLOR_WINDOW_BAR_INACTIVE;
+        elements[i].style.color=COLOR_WINDOW_BAR_TEXT_INACTIVE;
     }
 }
 
@@ -124,8 +125,8 @@ function Mouse_Move(e) {
 function Real_Offset(elem) {
     let top = 0, left = 0;
     while (elem) {
-        top = top + parseInt(elem.offsetTop, 10);
-        left = left + parseInt(elem.offsetLeft, 10);
+        top = top + parseInt(elem.offsetTop, 0);
+        left = left + parseInt(elem.offsetLeft, 0);
         elem = elem.offsetParent;
     }
     return { top: top, left: left };

@@ -9,10 +9,12 @@
 </head>
 <body>
     <div id="background_canvas"></div>
-    <div id="center_logo"></div>
-    <div id="main_canvas"></div>
+    <img id="center_logo" src="./resources/MakjOS.png"></img>
+    <div id="main_canvas">
+        <div id="icon_folder" class="main_canvas_item folder"><p><img src="./resources/folder.png" alt=""></p><p>Files</p></div>
+    </div>
     <div id="start_bar"></div>
-    <button id="start_button">Abe!!</button>
+    <button id="start_button"><img src="./resources/Abe.png" alt=""></button>
     <div id="start_menu">
         <div id="start_menu_banner"></div>
         <ul class="start_menu_item">
@@ -22,8 +24,10 @@
             <li>menu2</li>
         </ul>
     </div>
-    <Script src="script.js"></Script>
-    <Script src="interaction.js"></Script>
-    <Script src="about_form.js"></Script>
+    <Script src="./scripts/theme_setup.js"></Script>
+    <Script src="./scripts/script.js"></Script>
+    <Script src="./scripts/interaction.js"></Script>
+    <Script src="./forms/about_form.js"></Script>
+    <Script src="./forms/files_form.js"></Script>
 </body>
 </html>

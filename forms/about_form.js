@@ -1,5 +1,5 @@
-function Create_About_Window() {
-    let a_window = Create_A_Window("100px", "100px", "About", "400px", "400px", true);
+function Open_About_Window() {
+    let a_window = Create_A_Window("100px", "100px", "About Abe", "400px", "400px", true);
 
     if(a_window === null) return;
 
@@ -50,7 +50,9 @@ function Create_About_Window() {
     tab_content.style.gridRow="2/3";
     tab_content.style.gridColumn="1/5";
     tab_content.style.paddingTop="5px";
-    tab_content.innerText="Love life. Into programming. Proficient .NET C# developer. Wanting to become cloud engineer.";
+    tab_content.style.color="black";
+    tab_content.style.overflowY="auto";
+    tab_content.style.maxHeight="330px";
 
     content.appendChild(tab_one);
     content.appendChild(tab_two);
@@ -81,7 +83,16 @@ function Create_About_Window() {
 function Show_IAM_Content(tab, tab_content) {
     Reset_Tab_Color();
     tab.style.backgroundColor="#a3a3a3";
-    tab_content.innerText="Love life. Enjoy being in the open road and fresh outdoor air. Into game/software development. Proficient .NET C# developer. Wanting to become cloud engineer. Gamer!";
+    tab_content.innerHTML="<p>Hailed from tropical island of Java. Abe sets out for new adventure in New Zealand.</p>" +
+    "<p>An intermediate level Software Developer. Ready to level up the skill. Killing bugs, sort out complicated hard to read code, re-configure stoney monolithic architecture, updating legacy codes and working with queries and learning new languages.</p>" +
+    "<p>Love traveling the New Zealand roads, enjoying fresh outdoor air and sight.</p>" +
+    "<p>Abe like Tai Chi, a bit of hiking and biking and swimming.</p>" +
+    "<p>And playing good PC games especially building management, tactics and FPS on free time.</p>" +
+    "<p>Hailed from tropical island of Java. Abe sets out for new adventure in New Zealand.</p>" +
+    "<p>An intermediate level Software Developer. Ready to level up the skill. Killing bugs, sort out complicated hard to read code, re-configure stoney monolithic architecture, updating legacy codes and working with queries and learning new languages.</p>" +
+    "<p>Love traveling the New Zealand roads, enjoying fresh outdoor air and sight.</p>" +
+    "<p>Abe like Tai Chi, a bit of hiking and biking and swimming.</p>" +
+    "<p>And playing good PC games especially building management, tactics and FPS on free time.</p>"
 }
 
 function Show_Skill_Content(tab, tab_content) {
@@ -93,7 +104,34 @@ function Show_Skill_Content(tab, tab_content) {
 function Show_Exp_Content(tab, tab_content) {
     Reset_Tab_Color();
     tab.style.backgroundColor="#a3a3a3";
-    tab_content.innerHTML="<ul><li>Avenir</li><li>Very Impressive Soft</li></ul>"
+    tab_content.innerHTML="<ol>" +
+    "<li>Very Impressive Software</li>" +
+    "<p>Software Developer</p>" +
+    "<span>2020 - NOW</span>" +
+    "<p>Specialises in MYOB product integration app development. Very Impressive is now part of Kilimanjaro Consulting with offices in Australia and New Zealand.</p>" +
+    "<p>My role including support and development.</p>" +
+    "<p>I enjoy working in this small team and know each other well. I'm also quite get along well with clients that I support.</p>" +
+    "<p>For development we use:</p>" +
+    "<ul><li>.NET Framework</li>"+
+    "<li>.NET Core</li>"+
+    "<li>MSSQL</li>"+
+    "<li>.NET C# and VB</li>"+
+    "</ul><hr/>" +
+    "<li>Avenir Technology</li>" +
+    "<p>Inter Software Developer</p>" +
+    "<span>2019 - 2020</span>" +
+    "<p>Close knit Start up company growing out of its Start-Up phase. Avenir is a global developer of post-trade Financial Market Infrastructure solutions.</p>" +
+    "<p>I learn working in a team environment while learning software versioning and secure development best practices.</p>" +
+    "<p>The technologies that used:</p>" +
+    "<ul><li>PERL</li>"+
+    "<li>PostgreSQL</li>"+
+    "<li>PHP</li>"+
+    "<li>JavaScript</li>"+
+    "<li>GIT</li>"+
+    "<li>Bash script</li>"+
+    "</ul>" +
+    "<hr/>" +
+    "</ol>";
 }
 
 function Show_Hobby_Content(tab, tab_content) {
