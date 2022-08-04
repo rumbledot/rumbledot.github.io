@@ -5,7 +5,7 @@ function Open_About_Window() {
 
     let content = document.createElement("div");
     content.style.display="grid";
-    content.style.gridTemplateColumns="auto-fit auto-fit auto-fit auto-fit";
+    content.style.gridTemplateColumns="auto auto auto auto";
     content.style.gridTemplateRows="25px auto";
     content.style.position="relative";
     content.style.width="100% -10px";

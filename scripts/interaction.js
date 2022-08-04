@@ -115,7 +115,7 @@ function Mouse_Move(e) {
     if (left <= 0) left = 0;
     if (left > maxW) left = maxW;
     let top = e.pageY - offset.top;
-    if (top <= 0) top = 0;
+    if (top <= 30) top = 30;
     if (top > maxH) top = maxH;
 
     pickedElement.style.left  = left + "px";
@@ -125,8 +125,8 @@ function Mouse_Move(e) {
 function Real_Offset(elem) {
     let top = 0, left = 0;
     while (elem) {
-        top = top + parseInt(elem.offsetTop, 0);
-        left = left + parseInt(elem.offsetLeft, 0);
+        top = top + parseInt(elem.offsetTop, "10") + 15;
+        left = left + parseInt(elem.offsetLeft, "10");
         elem = elem.offsetParent;
     }
     return { top: top, left: left };
