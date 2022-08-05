@@ -1,5 +1,5 @@
 function Open_Files_Window() {
-    let a_window = Create_A_Window("100px", "100px", "Files Explorer", "600px", "400px", true);
+    let a_window = Create_A_Window("100px", "100px", "File Cabinet", "600px", "400px", true);
 
     if(a_window === null) return;
 
@@ -18,7 +18,7 @@ function Open_Files_Window() {
     content.appendChild(File_Icon_Element("CV", "./resources/documents/CV.pdf"));
     content.appendChild(File_Icon_Element("MYOB Adv API Dev", "./resources/documents/MYOB_API.pdf"));
     content.appendChild(File_Icon_Element("MYOB Adv Dev", "./resources/documents/MYOB_Developer.pdf"));
-    content.appendChild(File_Icon_Element("happens", "./resources/abe.png"));
+    content.appendChild(File_Icon_Element("happens", "./resources/Abe.png"));
 
     a_window.appendChild(content);
 
@@ -36,14 +36,15 @@ function File_Icon_Element(file_name, url) {
     file_icon.style.overflow="hidden";
 
     let file_icon_img = document.createElement("img");
-    file_icon_img.style.gridRow="1/2"
-    file_icon_img.style.justifySelf="center"
+    file_icon_img.style.gridRow="1/2";
+    file_icon_img.style.justifySelf="center";
     file_icon_img.src="./resources/file.png";
     file_icon_img.alt="file";
 
     let file_name_text = document.createElement("span");
-    file_name_text.style.gridRow="2/3"
-    file_name_text.style.justifySelf="center"
+    file_name_text.style.gridRow="2/3";
+    file_name_text.style.justifySelf="center";
+    file_name_text.style.overflow="hidden";
     file_name_text.innerText=file_name;
 
     file_icon.appendChild(file_icon_img);

@@ -38,7 +38,7 @@ function Create_A_Window(x, y, title, w, h, unique) {
     let a_window_bar = document.createElement("button");
     a_window_bar.style.display="block";
     a_window_bar.style.position="relative";
-    a_window_bar.style.width="90%";
+    a_window_bar.style.setProperty("width", "calc(100% - 25px)");
     a_window_bar.style.height="25px";
     a_window_bar.style.backgroundColor=COLOR_WINDOW_BAR;
     a_window_bar.style.color=COLOR_WINDOW_BAR_TEXT;
@@ -48,7 +48,7 @@ function Create_A_Window(x, y, title, w, h, unique) {
     let a_window_close = document.createElement("button");
     a_window_close.style.display="block";
     a_window_close.style.position="absolute";
-    a_window_close.style.width="10%";
+    a_window_close.style.width="25px";
     a_window_close.style.height="25px";
     a_window_close.style.right="0px";
     a_window_close.style.top="0px";
@@ -115,8 +115,8 @@ function Mouse_Move(e) {
     if (left <= 0) left = 0;
     if (left > maxW) left = maxW;
     let top = e.pageY - offset.top;
-    if (top <= 30) top = 30;
-    if (top > maxH) top = maxH;
+    if (top <= 0) top = 0;
+    if (top > maxH - 30) top = maxH - 30;
 
     pickedElement.style.left  = left + "px";
     pickedElement.style.top = top + "px";
@@ -125,7 +125,7 @@ function Mouse_Move(e) {
 function Real_Offset(elem) {
     let top = 0, left = 0;
     while (elem) {
-        top = top + parseInt(elem.offsetTop, "10") + 15;
+        top = top + parseInt(elem.offsetTop, "10");
         left = left + parseInt(elem.offsetLeft, "10");
         elem = elem.offsetParent;
     }

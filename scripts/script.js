@@ -10,6 +10,15 @@ var pickedElement;
 var offset;
 var windowIndex = 0;
 
+function Update_Clock() {
+    let current_date = new Date();
+    let current_time = `${current_date.toLocaleDateString("en-US", { weekday: 'short' })} ${current_date.getHours()}:${current_date.getMinutes()}`;
+    document.getElementById("start_bar_clock").innerText=current_time;
+}
+
+Update_Clock();
+setInterval(() => { Update_Clock(); }, 60000);
+
 main_canvas.onclick = function() {
     menu_shown = true;
     Toggle_Start_Menu();
