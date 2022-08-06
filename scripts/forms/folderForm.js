@@ -3,6 +3,8 @@ function Open_Folder_Window() {
 
     if (a_window === null) return;
 
+    Toggle_Start_Menu();
+
     let content = document.createElement("div");
     content.style.display = "grid";
     content.style.gridTemplateColumns = "25% 25% 25% 25%";

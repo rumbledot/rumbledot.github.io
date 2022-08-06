@@ -1,0 +1,174 @@
+#canvasBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(102, 117, 90);
+    z-index: -1000;
+}
+
+#canvasLogo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    display: inline-block;
+    z-index: -995;
+}
+
+#canvasMain {
+    display: grid;
+    position: absolute;
+    bottom: 30px;
+    left: 0px;
+    width: 100%;
+    height: calc(100% - 30px);
+    justify-content: space-evenly;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+    z-index: -990;
+}
+
+#startBar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background-color: #995757;
+    z-index: -950;
+}
+
+#startButton {
+    position: absolute;
+    left: 10px;
+    bottom: 2px;
+    width: 100px;
+    height: 25px;
+    background-color: #c0c5c9;
+    border-top: 2px solid #a3a3a3;
+    border-right: 2px solid #a3a3a3;
+    border-bottom: 2px solid #a0a3a5;
+    border-left: 2px solid #a0a3a5;
+    z-index: -900;
+}
+
+#startButton:hover {
+    background-color: #a3a3a3;
+}
+
+#startBarClock {
+    display: flex;
+    position: absolute;
+    right: 10px;
+    bottom: 2px;
+    width: 100px;
+    height: 20px;
+    background-color: #c0c5c9;
+    border-top: 2px solid #a3a3a3;
+    border-right: 2px solid #a3a3a3;
+    border-bottom: 2px solid #a0a3a5;
+    border-left: 2px solid #a0a3a5;
+    justify-content: center;
+    align-content: center;
+    z-index: -900;
+}
+
+#startMenu {
+    display: none;
+    position: absolute;
+    width: 150px;
+    left: 5px;
+    bottom: 35px;
+    height: 200px;
+    background-color: #c0c5c9;
+    border: 2px solid #a3a3a3;
+    z-index: -980;
+}
+
+.start_menu_grow {
+    -webkit-animation-name: menu_growing;
+    -webkit-animation-duration: .2s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes menu_growing {
+    from {
+        -webkit-transform: scale(0.1);
+    }
+
+    to {
+        -webkit-transform: scale(1);
+    }
+}
+
+#startMenuBanner {
+    position: relative;
+    width: 10px;
+    height: 100%;
+    background-image: linear-gradient(#0601B2, #c0c5c9);
+}
+
+.canvasMainItem {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    align-content: center;
+    height: fit-content;
+    overflow: hidden;
+}
+
+.canvasMainItem .iconImage {
+    grid-row: 1 / 2;
+    justify-self: center;
+}
+
+.canvasMainItem .iconText {
+    grid-row: 2 / 3;
+    width: 100px;
+    text-align: center;
+    justify-self: center;
+    overflow: hidden;
+}
+
+.canvasMainItem .iconImage:hover {
+    scale: 1.2;
+}
+
+#startMenuItems {
+    position: absolute;
+    top: 0px;
+    left: 12px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 90%;
+}
+
+.startMenuItem {
+    margin: 5px 5px 5px 5px;
+    cursor: default;
+}
+
+.menuLineBreak {
+    margin: 5px 5px 5px 5px;
+    height: 5px;
+    width: 90%;
+    background-color: black;
+}
+
+.menuLineBreak:hover {
+    background-color: black !important;
+}
+
+.startMenuItem:hover {
+    background-color: #0601B2;
+    color: white;
+}
