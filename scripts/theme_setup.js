@@ -26,12 +26,12 @@ var COLOR_HIGHLIGHT_TEXT = localStorage.getItem("color_highlight_text");
 if(COLOR_HIGHLIGHT_TEXT === null || COLOR_HIGHLIGHT_TEXT === undefined) COLOR_HIGHLIGHT_TEXT = "white";
 
 function Set_Background_Color() {
-    let bg = document.getElementById("background_canvas");
+    let bg = document.getElementById("canvasBackground");
     bg.style.backgroundColor=COLOR_BACKGROUND;
 }
 
 function Set_Start_Bar() {
-    let bar = document.getElementById("start_bar");
+    let bar = document.getElementById("startBar");
     bar.style.backgroundColor=COLOR_START_BAR;
 }
 

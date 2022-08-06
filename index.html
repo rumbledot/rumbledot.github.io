@@ -1,37 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abraham Kurnanto</title>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <div id="background_canvas"></div>
-    <img id="center_logo" src="./resources/MakjOS.png"></img>
-    <div id="main_canvas">
-        <div id="icon_folder" class="main_canvas_item folder">
-            <img class="item_icon_img" src="./resources/folder.png" alt="">
-            <span class="item_icon_text">Files</span>
-        </div>
-    </div>
-    <div id="start_bar"></div>
-    <button id="start_button"><img src="./resources/Abe.png" alt=""></button>
-    <div id="start_bar_clock">12:00</div>
-    <div id="start_menu">
-        <div id="start_menu_banner"></div>
-        <ul class="start_menu_item">
-            <li id="menu_about">About Abe</li>
-            <li class="menu_line_break"></li>
-            <li>menu2</li>
-            <li>menu2</li>
-        </ul>
-    </div>
-    <Script src="./scripts/theme_setup.js"></Script>
-    <Script src="./scripts/script.js"></Script>
+    <div id="app"></div>
+    <Script src="./scripts/index.js"></Script>
+    <Script src="./scripts/forms/main_form.js"></Script>
     <Script src="./scripts/interaction.js"></Script>
-    <Script src="./forms/about_form.js"></Script>
-    <Script src="./forms/files_form.js"></Script>
+    <Script src="./scripts/forms/about_form.js"></Script>
+    <Script src="./scripts/forms/folder_form.js"></Script>
+    <Script src="./scripts/theme_setup.js"></Script>
 </body>
+
 </html>
