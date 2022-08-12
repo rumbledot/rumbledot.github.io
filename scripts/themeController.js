@@ -35,9 +35,14 @@ function SetStartBarColor(colorName) {
     bar.style.backgroundColor = colorName;
 }
 
-function SetElementIDColor(id, colorName) {
-    let element = document.getElementById(id);
-    element.style.backgroundColor = colorName;
+function SetElementClassNameColor(className, colorName) {
+    console.log(className);
+    let elements = document.getElementsByClassName(className);
+    console.log(elements.length);
+    elements.forEach(element => {
+        console.log(element);
+        element.style.backgroundColor = colorName;
+    });
 }
 
 function SetElementColor(element, colorName) {
