@@ -58,6 +58,7 @@ function Create_A_Window(x, y, title, w, h, unique) {
 function Pick_Window(clickedElement) {
     Reset_Window_Bar_Color();
     pickedElement = clickedElement;
+    pickedElement.style.zIndex = -980;
     let window_bar = pickedElement.childNodes[0];
     window_bar.style.backgroundColor = COLOR_WINDOW_BAR;
     window_bar.style.color = COLOR_WINDOW_BAR_TEXT;
@@ -76,6 +77,7 @@ function Reset_Window_Bar_Color() {
     for (var i = 0; i < elements.length; i++) {
         elements[i].style.backgroundColor = COLOR_WINDOW_BAR_INACTIVE;
         elements[i].style.color = COLOR_WINDOW_BAR_TEXT_INACTIVE;
+        elements[i].style.zIndex = -990;
     }
 }
 

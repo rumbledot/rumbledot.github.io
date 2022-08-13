@@ -3,6 +3,7 @@ function Open_Folder_Window() {
 
     if (a_window === null) return;
 
+    menu_shown = true;
     Toggle_Start_Menu();
 
     let content = document.createElement("div");

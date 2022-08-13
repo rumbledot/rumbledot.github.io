@@ -1,3 +1,13 @@
+//color pallete
+//#00000F black 
+//00D587  greenish
+//00ADFF blue
+//5FC2ED light blue
+//BDD7DB light grey
+//A4BCC6 grey
+//F3FFFC offwhite
+//FFFFF6 white
+
 var COLOR_BACKGROUND = localStorage.getItem("color_background");
 if (COLOR_BACKGROUND === null || COLOR_BACKGROUND === undefined) COLOR_BACKGROUND = "#00adff"; //#97c93f
 
