@@ -39,7 +39,7 @@ function Open_About_Window() {
     tab_three.style.height = "25px";
     tab_three.style.backgroundColor = "#c0c5c9";
     tab_three.className = "about_tab";
-    tab_three.innerText = "Coming soon"
+    tab_three.innerText = "RumbleDot"
 
     let tab_four = document.createElement("button");
     tab_four.style.gridRow = "1/2";
@@ -75,7 +75,7 @@ function Open_About_Window() {
     }
 
     tab_three.onclick = function () {
-
+        Show_RumbleDot_Content(tab_three, tab_content);
     }
 
     tab_four.onclick = function () {
@@ -104,6 +104,16 @@ function Show_System_Content(tab, tab_content) {
         "<li>Passion in technology</li> " +
         "<li>Experience</li> " +
         "</ul> ";
+}
+
+function Show_RumbleDot_Content(tab, tab_content) {
+    Reset_Tab_Color();
+    tab.style.backgroundColor = "#a3a3a3";
+    tab_content.innerHTML = "What or Who is Rumbledot?" +
+        "<p>RumbleDot is acronymn of Neil Rumble and Dot Wilson. They are proud Invercargillite and our friend. Who first open their home and welcome us in New Zealand.</p>" +
+        "<p>The name used for the first time for my fictional Game Development company. Created for my Post Graduate paper.</p> " +
+        "<p>They are very pleased that I choose their beloved city as the site." +
+        "And very hopeful, the business will someday start.</p><span>Pst.. This is still my long-term goal. :)</span>";
 }
 
 function Show_Tab2_Content(tab, tab_content) {
